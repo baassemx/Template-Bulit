@@ -1,0 +1,29 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+.container {
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+  @media ($smalllest) {
+    width: 100%;
+  }
+  @media ($small) {
+    width: 540px;
+  }
+  @media ($mobile) {
+    width: 720px;
+  }
+  @media ($medium) {
+    width: 960px;
+  }
+  @media ($min-large) {
+    width: 1140px;
+  }
+  @media ($max-lage) {
+    width: 1320px;
+  }
+}

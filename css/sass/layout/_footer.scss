@@ -1,0 +1,152 @@
+/* Start Footer */
+footer {
+  padding: 80px 0;
+  background-color: #313131;
+  .container {
+    .footer-container {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      color: white;
+      .text {
+        width: (88% / 4);
+        @media ($min-mwdium) {
+          width: (96% / 2);
+          margin-bottom: 35px;
+        }
+        @media ($small-mobile) {
+          width: 100%;
+        }
+        img {
+          max-width: 100%;
+        }
+        p {
+          line-height: 1.7;
+          font-weight: 300;
+          margin-top: 35px;
+          @media ($min-mwdium) {
+            margin-top: 20px;
+          }
+          @media ($smalllest) {
+            font-size: 0.8rem;
+          }
+        }
+        h3 {
+          font: {
+            weight: normal;
+            size: 1.3rem;
+          }
+          color: $mainColor;
+          text-transform: uppercase;
+          @media ($smalllest) {
+            font-size: 1rem;
+          }
+        }
+        ul {
+          list-style: none;
+          margin-top: 35px;
+          @media ($min-mwdium) {
+            margin-top: 20px;
+          }
+          li {
+            font-weight: 300;
+            cursor: pointer;
+            @include prefixers(transition, 0.2s);
+            &:not(:last-child) {
+              margin-bottom: 10px;
+            }
+            &:hover {
+              color: $mainColor;
+            }
+            @media ($smalllest) {
+              font-size: 0.8rem;
+            }
+          }
+        }
+      }
+    }
+    .subscribe {
+      width: 50%;
+      margin-top: 10px;
+      margin-left: auto;
+      display: flex;
+      justify-content: flex-end;
+      border-bottom: 1px solid white;
+      @media ($small-mobile) {
+        width: 100%;
+      }
+      input[type="text"] {
+        padding: 15px 0;
+        width: 100%;
+        background-color: transparent;
+        border: none;
+        caret-color: $mainColor;
+        &:focus {
+          outline: none;
+          &::placeholder {
+            @include prefixers(transition, 0.3s);
+            opacity: 0;
+          }
+        }
+      }
+      input[type="submit"] {
+        padding: 15px 0;
+        background-color: transparent;
+        color: $mainColor;
+        font-size: 1rem;
+        text-transform: uppercase;
+        border: none;
+        cursor: pointer;
+        @media ($smalllest) {
+          font-size: 0.8rem;
+        }
+      }
+    }
+  }
+}
+/* End Footer */
+/* Start Copyright */
+.copyright {
+  padding: 20px 0;
+  text-align: center;
+  .social {
+    @extend %center-flex;
+    margin-bottom: 10px;
+    i {
+      width: 30px;
+      height: 30px;
+      background-color: $mainColorText;
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      @include prefixers(border-radius, 50%);
+      @include prefixers(transition, 0.2s);
+      &:not(:last-child) {
+        margin-right: 10px;
+      }
+      &:hover {
+        &:first-child {
+          background-color: #1877f2;
+        }
+        &:nth-child(2) {
+          background-color: #1da1f2;
+        }
+        &:nth-child(3) {
+          background-color: #c32aa3;
+        }
+        &:last-child {
+          background-color: #0a66c2;
+        }
+      }
+    }
+  }
+  p {
+    font-weight: 300;
+    @media ($smalllest) {
+      font-size: 0.8rem;
+    }
+  }
+}
+/* End Copyright */

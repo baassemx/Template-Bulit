@@ -1,0 +1,103 @@
+header {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  z-index: 1000;
+  .container {
+    position: relative;
+    nav {
+      @extend %between-flex;
+      padding: 15px 0;
+      z-index: 1000;
+      .logo {
+        img {
+          @media ($smalllest) {
+            width: 120px;
+          }
+        }
+      }
+      ul.navbar {
+        @media ($min-mwdium) {
+          display: none;
+          &.open {
+            position: absolute;
+            display: flex;
+            flex-direction: column;
+            position: absolute;
+            top: 78px;
+            left: 0;
+            width: 100%;
+            background-color: white;
+            padding: 10px 0;
+            li {
+              &:not(:last-child) {
+                margin-bottom: 10px;
+              }
+              &:hover {
+                background-color: $mainColor;
+                color: white;
+                @include prefixers(transition, 0.2s);
+              }
+              a {
+                display: block;
+                padding-left: 10px;
+                @include prefixers(transition, 0.2s);
+                &:hover {
+                  color: white;
+                  padding-left: 20px;
+                }
+                @media ($smalllest) {
+                  font-size: 0.8rem;
+                }
+              }
+            }
+          }
+        }
+        li {
+          display: inline-block;
+          margin-left: 10px;
+          &:last-child {
+            a {
+              color: $mainColor;
+            }
+          }
+          a {
+            text-decoration: none;
+            color: $mainColorText;
+            text-transform: uppercase;
+            @include prefixers(transition, 0.2s);
+            &:hover {
+              color: $mainColor;
+            }
+          }
+        }
+      }
+      .login-div {
+        @media ($min-mwdium) {
+          display: none;
+        }
+        .search {
+        }
+        a {
+          text-decoration: none;
+          text-transform: uppercase;
+          color: $mainColorText;
+        }
+      }
+      .toggle-menu {
+        display: none;
+        font-size: 1.4rem;
+        color: $secondColorText;
+        padding: 4px 10px;
+        @include prefixers(border-radius, 6px);
+        background-color: white;
+        cursor: pointer;
+        @media ($min-mwdium) {
+          display: block;
+        }
+      }
+    }
+  }
+}

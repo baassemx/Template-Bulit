@@ -1,0 +1,26 @@
+.heading-section {
+  text-align: center;
+  width: 80%;
+  margin: 0 auto;
+  @media ($smalllest) {
+    width: 100%;
+  }
+  h1 {
+    font: {
+      weight: normal;
+      size: 2.5rem;
+    }
+    text-transform: uppercase;
+    margin-bottom: 15px;
+    @media ($smalllest) {
+      font-size: 1.5rem;
+    }
+  }
+  p {
+    font-weight: 300;
+    line-height: 1.8;
+    @media ($smalllest) {
+      font-size: 0.8rem;
+    }
+  }
+}
